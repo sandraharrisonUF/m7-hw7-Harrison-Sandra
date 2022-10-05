@@ -109,7 +109,7 @@ main p {
   line-height: 1.75;
   margin-bottom: 48px;
 }
-.p1::first-letter {
+.p-1::first-letter {
   float: left;
   line-height: 90px;
   font-size: 75px;
@@ -143,6 +143,7 @@ span.tooltip {
   color: var(--danger-color);
   position: relative;
   cursor: pointer;
+  text-align: center;
 }
 
 /* underline span on hover/focus */
@@ -154,7 +155,9 @@ span.tooltip:focus {
 span.tooltip:hover > span,
 span.tooltip:focus > span {
   display: inline;
-  flex-flow: unset;
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
 }
 
 /* styling for tooltip bubble */
@@ -165,15 +168,12 @@ span.tooltip span {
   border-radius: .4em;
   width:300px;
   flex-direction:column;
-  align-items:center;
-  text-align: center;
   color:white;
 }
 
 /* styling for tooltip bubble arrow */
 span.tooltip span::after {
   content: "";
-  position: absolute;
   bottom: 0;
   left: 50%;
   width: 0;
@@ -183,4 +183,7 @@ span.tooltip span::after {
   border-bottom: 0;
   margin-left: -20px;
   margin-bottom: -20px;
+  position: absolute;
+  
+  
 }
