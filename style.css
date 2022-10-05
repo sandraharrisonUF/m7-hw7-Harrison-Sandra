@@ -154,14 +154,33 @@ span.tooltip:focus {
 span.tooltip:hover > span,
 span.tooltip:focus > span {
   display: inline;
+  flex-flow: unset;
 }
 
 /* styling for tooltip bubble */
 span.tooltip span {
   display: none;
+  position: absolute;
+  background: #042d2f;
+  border-radius: .4em;
+  width:300px;
+  flex-direction:column;
+  align-items:center;
+  text-align: center;
+  color:white;
 }
 
 /* styling for tooltip bubble arrow */
 span.tooltip span::after {
   content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-top-color: #042d2f;
+  border-bottom: 0;
+  margin-left: -20px;
+  margin-bottom: -20px;
 }
