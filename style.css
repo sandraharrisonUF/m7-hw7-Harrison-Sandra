@@ -80,6 +80,8 @@ main > section.hero {
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
+  position: sticky;
+  top: 0;
   /* make this banner stick to the top! */
 }
 
@@ -105,7 +107,17 @@ main article {
 
 main p {
   line-height: 1.75;
-  margin-bottom: 48px;;
+  margin-bottom: 48px;
+}
+.p1::first-letter {
+  float: left;
+  line-height: 90px;
+  font-size: 75px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: black;
+  padding: 0 25px 15px 15px;
+  margin: -5px 5px -5px 10px;
 }
 
 main > article img {
