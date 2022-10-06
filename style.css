@@ -144,6 +144,7 @@ span.tooltip {
   position: relative;
   cursor: pointer;
   text-align: center;
+
 }
 
 /* underline span on hover/focus */
@@ -157,7 +158,9 @@ span.tooltip:focus > span {
   display: inline;
   position: absolute;
   bottom: 150%;
-  left: 50%;
+  right: 0%;
+  
+  
 }
 
 /* styling for tooltip bubble */
