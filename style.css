@@ -1,3 +1,15 @@
+/* ===========================
+
+Universal Styling 
+
+============================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 :root {
   --primary-color: #06b3bc;
   --text-color: #042d2f;
@@ -105,7 +117,7 @@ main article {
   padding: 48px 96px;
 }
 
-main p {
+main p, .p-1 {
   line-height: 1.75;
   margin-bottom: 48px;
 }
@@ -152,6 +164,7 @@ span.tooltip:hover,
 span.tooltip:focus {
   text-decoration: underline;
 }
+
 /* show tooltip on hover/focus */
 span.tooltip:hover > span,
 span.tooltip:focus > span {
@@ -159,8 +172,6 @@ span.tooltip:focus > span {
   position: absolute;
   bottom: 150%;
   right: 0%;
-  
-  
 }
 
 /* styling for tooltip bubble */
