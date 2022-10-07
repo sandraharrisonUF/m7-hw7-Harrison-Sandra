@@ -94,6 +94,7 @@ main > section.hero {
   text-align: center;
   position: sticky;
   top: 0;
+  z-index: 9999;
   /* make this banner stick to the top! */
 }
 
@@ -156,7 +157,7 @@ span.tooltip {
   position: relative;
   cursor: pointer;
   text-align: center;
-
+  
 }
 
 /* underline span on hover/focus */
@@ -168,10 +169,11 @@ span.tooltip:focus {
 /* show tooltip on hover/focus */
 span.tooltip:hover > span,
 span.tooltip:focus > span {
-  display: inline;
+  display: inline-block;
   position: absolute;
-  bottom: 150%;
-  right: 0%;
+  bottom: 35px;
+  left: 50%;
+  margin-left: -75px;
 
 }
 
@@ -181,9 +183,10 @@ span.tooltip span {
   position: absolute;
   background: #042d2f;
   border-radius: .4em;
-  width:300px;
   flex-direction:column;
   color:white;
+  padding: 30px;
+  z-index: 999999;
 }
 
 /* styling for tooltip bubble arrow */
