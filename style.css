@@ -172,6 +172,7 @@ span.tooltip:focus > span {
   position: absolute;
   bottom: 150%;
   right: 0%;
+
 }
 
 /* styling for tooltip bubble */
@@ -198,6 +199,4 @@ span.tooltip span::after {
   margin-left: -20px;
   margin-bottom: -20px;
   position: absolute;
-  
-  
 }
