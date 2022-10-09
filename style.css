@@ -91,7 +91,6 @@ main > section.hero {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  text-align: center;
   position: sticky;
   top: 0;
   z-index: 9999;
@@ -122,10 +121,11 @@ main p, .p-1 {
   line-height: 1.75;
   margin-bottom: 48px;
 }
+
 .p-1::first-letter {
   float: left;
   line-height: 90px;
-  font-size: 75px;
+  font-size: 80px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: bold;
   color: black;
@@ -156,8 +156,6 @@ span.tooltip {
   color: var(--danger-color);
   position: relative;
   cursor: pointer;
-  text-align: center;
-  
 }
 
 /* underline span on hover/focus */
@@ -170,17 +168,13 @@ span.tooltip:focus {
 span.tooltip:hover > span,
 span.tooltip:focus > span {
   display: inline-block;
-  position: absolute;
   bottom: 35px;
-  left: 50%;
   margin-left: -75px;
-
 }
 
 /* styling for tooltip bubble */
 span.tooltip span {
   display: none;
-  position: absolute;
   background: #042d2f;
   border-radius: .4em;
   flex-direction:column;
@@ -193,13 +187,28 @@ span.tooltip span {
 span.tooltip span::after {
   content: "";
   bottom: 0;
-  left: 50%;
   width: 0;
   height: 0;
   border: 20px solid transparent;
   border-top-color: #042d2f;
   border-bottom: 0;
-  margin-left: -20px;
-  margin-bottom: -20px;
+  margin: 0 0 -20px -20px;
+}
+
+span.tooltip:hover > span,
+span.tooltip:focus > span,
+span.tooltip span, 
+span.tooltip span::after {
   position: absolute;
+}
+
+span.tooltip:hover > span,
+span.tooltip:focus > span, 
+span.tooltip span::after {
+  left: 50%;
+}
+
+main > section.hero,
+span.tooltip {
+  text-align: center;
 }
